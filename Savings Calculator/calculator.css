@@ -1,0 +1,53 @@
+body {
+    font-family: Roboto;
+    background: #8e8e8e
+}
+
+#container {
+height: 525px;
+width: 360px;
+margin: 100px auto;
+background: #f7f7f7;
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+border-radius: 20px
+}
+
+h1{
+background: #1f030c;
+color: white;
+margin: 0;
+padding: 10px 100px;
+text-transform: uppercase;
+font-size: 14px;
+font-weight: normal;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+p {
+    padding-left: 20px;
+}
+
+form input[type="text"]{
+width:90px;
+}
+
+input {
+    padding-left:20px;
+}
+
+#wage {
+font-size:14px;
+     /*color: #2980b9;*/
+  color: #red;
+  background-color: #f7f7f7;
+  width: 60%;
+  padding: 5px 5px 8px 8px;
+}
+
+#wage:focus {
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+  }
+  
