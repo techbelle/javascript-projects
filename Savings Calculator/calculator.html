@@ -1,0 +1,38 @@
+<div id="container">
+    <h1>Savings Calculator</h1>
+    <div id="calculator">
+  
+  
+      <form>
+        <p>What is your annual salary?
+          <p>
+            $ <input id="wage" type="text" placeholder="Salary Amount">
+  
+            <p>How difficult is your savings goal?
+              <p>
+                <select id="serviceQual">
+              <option disabled selected value="0">-- Choose an Option --</option>
+              <option value="0.50">50&#37; &#45; I want to retire at 45.</option>
+              <option value="0.25">25&#37; &#45; Awesome</option>
+              <option value="0.10">10&#37; &#45; Be reasonable, now</option>
+              <option value="0.07">7&#37; &#45; Better than nothing</option>
+              <option value="0.02">2&#37; &#45; I don't actually care</option>
+          </select>
+  
+      </form>
+      <p>How many months do you want to save?</p>
+      <input id="numamt" type="text" placeholder="Number of Months"> Number of Months
+      <button type="button" id="calculate">Calculate!</button>
+  
+    </div>
+    <!--calculator end-->
+    <div id="monthlySavings">
+      <sup>$</sup><span id="monthlySavings">0.00</span>
+      <small id="each">each</small>
+    </div>
+    <!--totalTip end-->
+  
+  </div>
+  <!--container end-->
+  
+  <script type="text/javascript" src="calculator.js"></script>

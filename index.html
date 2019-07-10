@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+   
+    <div><h1>Variables</h1>
+        let interestRate = 0.3; //Number Literal
+        let isApproved = true; //Boolean Literal 
+        let firstName = undefined; //havent received yet
+        let lastName = null //explicitly clears the value of the variable. indicates no selection
+        
+    </div>
+    <div><h1>Objects</h1>
+    Multiple related variables are inside of an object. For example, a person. Name, birthdate, etc.
+   
+    let person = {
+        name: 'Mosh'; //String Literal
+        age: 37;
+    }
+
+    //Dot Notation or Bracket Notation
+    person.name = 'Rachelle';  //Cleanest, easiest method
+    person['name']= 'Mary'; //if you think this value might change at runtime, brackets.
+
+    </div>
+    <div><h1>Arrays</h1>
+        let selectedColors =['red','blue'];  
+        //This is an array, which is just a list of stuff
+        selectedColors[2]='green';
+        //Remember, in an array, the first entry is 0, so red.blue,green is 0,1,2 
+        //Arrays have properties, magically inherited, called "prototypes"
+        
+        console.log(selectedColors.length); //Will tell you the number of items in an array
+    
+    
+       <h1>Variables</h1>
+        // Cannot be a reserved keyword
+        // Should be meaningful
+        // Cannot start with a number
+        //Cannot contain a space or hyphen, and use camelcase
+        //These are case sensitive firstName FirstName are different things
+        //Should be declared on separate lines, term'd with a ;
+        //Start with let
+        //Two types, references and primitives
+    
+    
+        //Constants
+        //start with const
+        //should be your default choice unless you think this value will change
+    
+    //Javascript is a dynamic language, which means the value type can change at runtime
+    // all numbers are of type number, instead of numbers or floating point integers
+    
+    
+     <h1>Functions</h1>
+     A set of statements that perform a task or calculates a value
+     function greet(){
+        console.log('Hello there!');
+    }
+    greet();
+    //To calculate a value
+    What's a parameter vs argument (the argument is the actual value of the parameter)
+    function square(number){
+        return number * number;
+    }
+    let number = square (2)
+ console.log(number)
+<h1>Operators</h1>
+There are multiple kinds of operators. Arithmetic, Assignment, Comparison, Logical, Bitwise.</br>
+* Arithmetic = addition, substraction, division, remainder, multiplication, exponents (two stars)</div><br>
+* Increment  (++)<br>
+* Decrement (--)<br>
+* Assignment is the equals sign (+=). Where x=x+3 is the SAME as x *=3<br>
+* Comparison Operators. Greater than, less than. For example, let x = 1; console.log (x>0); will output "true"<br>
+*- Relational or Equality operators. Equality is three equal signs ===, not equal is !==, like x !==1 means "check if x is not equal to one"<br>
+Strict equality operators is === means have to be same type, same value. '1' vs 1 is NOT equal, because it's a string vs number.
+
+<h1>Ternary Operators</h1>
+example: if a customer has more than 100 points, they are a gold customer, otherwise silver.
+let points = 110
+let type = points > 100 ? 'gold' : 'silver'
+Start with condition, if true then use first value.
+console.log(type);
+
+<h1>Logical Operators</h1>
+<b>AND &&</b> <br>
+Returns true if both operands are true<br>
+Example: you want to build a situation where if both A and B are true, the customer gets something.
+let highIncome = true
+let goodCreditScore = true
+let eligibleForLoan = highIncome && goodCreditScore;
+console.log(eligibleForLoan);
+(will output 'true')
+ <br>
+<b>OR ||</b>
+if either operand is true, then it outputs true
+let eligibleForLoan = highIncome || goodCreditScore;
+<br>
+<b>NOT !</b>
+let applicationRejected = !eligibleForLoan;
+<br>
+<h1>Logical Operators with Non-Booleans</h1><br>
+Falsy = undefined, null, 0, NaN, ''<br>
+Truthy = anything not Falsy<br>
+example: user must pick a drink choice. if they don't pick anything, they get water.<br>
+let userChoice = 'wine';<br>
+let defaultChoice = 'water';<br>
+let currentChoice = userChoice || defaultChoice;<br>
+console.log (currentChoice);<br>
+<h1>Operators Precedence</h1><br>
+let x = 2+3*4<br>
+if you do console.log (x); it will show 14.<br>
+if you want things to be processed in certain order, you should use parenthesis, just like in mathematics.
+<hr>
+<br>
+<br>
+<h1>If...Else</h1>
+If hour is between 6-12pm Good morning! If between 12pm and 6pm, Good Afternoon. Or, display Good night!
+<br>
+if (condition)... is true{<br>
+    statement is executed<br>
+}<br>
+else if (anotherCondition){<br>
+a different statement<br>
+}<br>
+if none of these are true... else<br>
+<br>
+<code>
+    let hour = 10;
+    if(hour >=6 && hour < 12) {
+    console.log('Good morning');
+}
+</code>
+<br>
+<h1>Switch Case</h1>
+switch (role){
+case 'guest': 
+ console.log('Guest User')
+ break;
+ case 'moderator':
+ console.log ('Moderator User')
+ break;
+}<br>213343
+<h1>For</h1>
+To repeat an action a number of times, we use loops. For loops, while loops, do while loops, for...in loops, for ... of loop.<!DOCTYPE html>
+<br>
+<h1>Infinite Loops</h1>
+a loop you usually accidentally build, that will crash your browser, because you didn't set up incrementing correctly
+while (true) {<br>
+something that is always true...}<br>
+AVOID AVOID AVOID<br>
+<h1>For-In</h1>
+We've so far learned, For Loops, While Loops, and Do-While Loop. There's also <For-In class=""></For-In>
+const person = {
+name: 'Rachelle',
+age: 37
+};
+<br>
+contrast<br>
+for (let key in person)<br>
+in every iteration, the key variable in the loop will be the properties of person<br>
+
+Two ways to access properties <b>Dot Notation</b> or <b>Bracket Notation</b>.
+person.name or person ['name']
+<br>
+Can also iterate over an array like const colors = ['red','green','blue'];
+for (let index in colors)
+console.log(index, colors[index]);
+<br>
+ES6 is the modern version of Javascript. But for-of loops are better for arrays.<br>
+If you want to loop through elements of an array, use FOR OF
+<b>for (let color of colors);</b>
+<br>
+<h1>Break and Continue</h1>
+to get out of all these loops, use the 'break' keyword.
+<i> if (i === 5), break;</i><br>
+<hr>
+<h1>Exercises...Max of Two Numbers</h1>
+You'll discover there are many ways to do things.
+<code>
+        let x = 50
+        let y = 65
+        if (x>y){
+            console.log(x);
+        }
+        else if (x < y){
+            console.log(y);
+        }
+<br>
+        //the other way to do this is
+        let number = max(50,65);
+        console.log(number);
+        function max (a, b){
+            if (a>b) return a;
+            else return b;
+        }
+    <br>    
+        //the other way to do this is with the Ternary Operator
+        let anotherNumber = max (50,65);
+        console.log(anotherNumber);
+        function max(a,b){
+            return (a>b) ? a : b;
+        }
+</code>
+<br>
+<br>
+Exercise 2... returning true and false.
+<code>
+        let width = 1000
+        let height = 100
+        console.log ('isLandscape');
+        function isLandscape(width, height){
+            return (width>height) ? width : height;
+        }
+        <br>
+
+LOOKS BETTER AS<br>
+let width = 1000
+        let height = 100
+        console.log ('isLandscape');
+        function isLandscape(width, height){
+            return (width>height);
+        }
+<br>
+STILL BETTER
+console.log (isLandscape(100,1000));
+function isLandscape(width,height){
+return (width > height);
+}
+<br>
+<h1>FIZZBUZZ</h1>
+
+</code>
+
+</div>
+    <script src="index.js"></script> 
+</body>
+</html> 
